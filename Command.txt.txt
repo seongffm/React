@@ -1,0 +1,167 @@
+1. [ 경로 이동 ]
+cd 
+ - cd .. 상위 경로 이동
+ - cd 접근하고 싶은 파일명
+
+2. [ 접근 가능 파일 확인 ]
+ls
+ - 현재 경로에서 접근 할 수 있는 파일 출력
+
+3. [ react 프로젝트 설치 ]
+npx create-react-app .
+
+4. [ react 프로젝트 실행 ]
+npm start
+
+5. [ 파일 생성 ]
+mkdir
+
+6. [ 비구조화 할당 ]
+let {name, sub, mbti} = {
+   name : '모현정',
+   sub : 'web',
+   mbti : 'istj'
+}
+console.log(name)
+
+let props = { team : '교육운영부', 
+   name : '선영표', 
+   sub : 'web'
+}
+= 동일하다 !
+let {team,name,sub} = { team : '교육운영부', 
+   name : '선영표', 
+   sub : 'web'
+}
+
+7. [ C:\Users\smhrd\Desktop\ReactExample\project04 ]
+
+
+[만약 나의 터미널에는] 
+C:\Users\smhrd\Desktop\
+
+cd ReactExample 
+cd project04 
+
+[만약 나의 터미널에는] 
+C:\Users\smhrd\Desktop\ReactExample\project04\src 
+
+cd .. 
+
+8. [ http://localhost:3000/ ]
+
+9. [ let idx = newTodos.findIndex(item => item.num == num); ]
+
+[원래모습]
+let idx = newTodos.findIndex((item)=>{
+   return item.num == num
+}); 
+
+[1번 생략 - return] 
+let idx = newTodos.findIndex((item)=>(item.num == num)); 
+
+
+[2번 생략]
+let idx = newTodos.findIndex(item=>item.num == num); 
+
+10. [ REACT 복습 ]
+
+1) component 단위로 구성
+2) 상위 컴포넌트 -> 하위컴포넌트 값 전달 : props
+App.js
+<MemberBox name="모현정"/>
+
+const MemberBox = (props) => {
+	console.log(props.name)
+}
+
+const MemberBox = ({name}) => {
+	console.log(name)
+}
+
+11. [ React Tip! ]
+
+내가 반복되는 컴포넌트를 만들어야한다. 
+특정값을 제외하고 나머지가 반복이 된다?
+==> 나머지 값들을 배열로 만든 다음, 그 배열로 map 함수를 사용한다
+
+12. [ REACT 오류 종류 ]
+
+1) Module not Found 
+ 1-1) 파일명 오류 
+ 1-2) 파일 경로 오류 
+ 1-3) export 없을 가능성 
+ 1-4) 파일 이름을 변경했는데 리액트가 아직 전 파일을 인지하고 있는 경우 
+
+2) ~ is not defined 
+ 2-1) 모듈 import 안해온거
+ 2-2) 모듈 import 오타난거 
+ 2-3) 모듈 import 경로 오류 
+
+13. [ 코드의 유행~! ]
+
+1) 절차적 프로그래밍 
+2) 객체 지향 프로그래밍 
+React 또한 Class Component를 사용 
+
+3) 함수형 프로그래밍 => 유행을 함! 
+React 또한 Function Component
+
+기존에 사용하던 기능들을 Function Component 에서는 사용할 수 없으니, 새로운 기능들을 만들어 준다. use~ = > React hooks
+
+14. [ React ]
+Component 
+Props 
+State 
+Map 함수 
+===================
+useContext 
+useEffect 
+Router 
+
+15. [ 새로운 프로젝트 생성 ]
+1) Ctrl +c 두번 눌러서 서버 종료
+2) cd .. 
+3) npx create-react-app 폴더명
+4) cd 폴더명
+5) npm i react-router-dom axios
+6) npm start
+7) index.js에서 import { BrowserRouter } from 'react-router-dom' 불러오기
+8) index.js에 가서 StrictMode 태그를 BrowserRouter로 변경
+9) App.js 에 가서 return 문 안에 있는 코드 삭제 또는 변경
+
+16. [ 표현법 ]
+map(item =>item) 
+
+원본
+map((item)=>{return item}) 
+
+1번 줄임
+map(item => (item))
+
+2번 줄임
+map(item => item) 
+
+17. [React 복습 방법]
+component,
+props, 
+state, 
+useEffect 
+================
+Router 
+Map 
+=============== 
+Context 
+
+18. [Error 정리]
+
+1) ~ is not defined 
+- import 
+- 파일 생성 안됐거나
+- state 생성 안됐거나 
+- props 로 받아와서 사용해놓고, props 안받아온거 
+
+2) Module not found 
+- 모듈 설치 x 
+- 모듈 오타
+- import 할 때 {} 
